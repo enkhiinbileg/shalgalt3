@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Product Management</title>
+</head>
+<body class="bg-gradient-to-b from-gray-800 to-gray-900 text-white min-h-screen flex flex-col items-center">
+  <!-- Header -->
+  <div class="header flex justify-between items-center w-full p-4 bg-emerald-500">
+    <div class="logo text-2xl font-bold ml-4">Лого</div>
+    <div class="menu flex space-x-4 mr-4">
+      <a href="./index.html" class="text-white font-medium hover:text-gray-200">Нүүр</a>
+      <a href="./index2.html" class="text-white font-medium hover:text-gray-200">Нэмэх</a>
+      <a href="./index3.html" class="text-white font-medium hover:text-gray-200">Сагс</a>
+    </div>
+  </div>
+
+  <!-- Product List -->
+  <div class="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-full max-w-screen-lg">
+    <!-- Product 1 -->
+    <div class="product bg-white text-gray-800 rounded-lg shadow-lg p-4">
+      <img src="./-1.jpg" alt="Product 1" class="w-full h-40 object-cover rounded-t-md">
+      <div class="p-4">
+        <h3 class="text-lg font-bold mb-2">Jordan 1</h3>
+        <p class="text-sm text-gray-600 mb-2">This is the introduction or description of Product 1.</p>
+        <p class="text-lg font-semibold text-gray-800 mb-4">$99.99</p>
+        <div class="flex space-x-2">
+          <button class="action-btn bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" data-action="save">
+            Save
+          </button>
+          <button class="action-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" data-action="add">
+            Add
+          </button>
+          <button class="action-btn bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" data-action="delete">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- More products... -->
+  </div>
+
+  <script>
+    // Universal button handler
+    const buttons = document.querySelectorAll(".action-btn");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", (event) => {
+        const action = event.target.dataset.action; // Get action type
+        const productTitle = event.target.closest(".product").querySelector("h3").innerText;
+
+        switch (action) {
+          case "save":
+            alert(`Saved "${productTitle}"!`);
+            break;
+          case "add":
+            alert(`Added "${productTitle}" to cart!`);
+            break;
+          case "delete":
+            if (confirm(`Are you sure you want to delete "${productTitle}"?`)) {
+              event.target.closest(".product").remove();
+            }
+            break;
+          default:
+            console.log("Unknown action!");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

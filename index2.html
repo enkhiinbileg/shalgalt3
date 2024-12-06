@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header flex justify-between align-text h-14 bg-emerald-500 w-full">
+        <div class="logo ml-20">Лого</div>
+        <div class="menu mr-20">
+            <a href="./index.html" class="mr-10">Нүүр</a>
+            <a href="" class="mr-10">Бүтээгдэхүүн нэмэх</a>
+            <a href="/index3.html" class="mr-10">Сагс</a>
+        </div>
+    </div>
+    
+    
+    </div>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+        <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+          <h2 class="text-2xl font-bold text-gray-800 text-center mb-6">Бүтээгдэхүүн нэмэх</h2>
+          <form class="space-y-4">
+            
+            <div>
+              <label for="title" class="block text-sm font-medium text-gray-700">Гарчиг</label>
+              <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter the title"
+              >
+            </div>
+      
+            <div>
+              <label for="introduction" class="block text-sm font-medium text-gray-700">Тайлбар</label>
+              <textarea 
+                id="introduction" 
+                name="introduction" 
+                rows="3" 
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter the introduction or description"
+              ></textarea>
+            </div>
+      
+            <div>
+              <label for="price" class="block text-sm font-medium text-gray-700">Үнэ</label>
+              <input 
+                type="number" 
+                id="price" 
+                name="price" 
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter the price"
+              >
+            </div>
+      
+           
+            <div>
+              <label for="image" class="block text-sm font-medium text-gray-700">Зураг url</label>
+              <input 
+                type="url" 
+                id="image" 
+                name="image" 
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter the image URL"
+              >
+            </div>
+      
+         
+            <div>
+              <button 
+                type="submit" 
+                class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                хадгалах
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <script src="./index.js"></script>
+</body>
+</html>
